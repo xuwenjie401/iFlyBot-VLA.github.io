@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我的项目主页</title>
+  <meta name="description" content="展示图片、视频、与文字的简洁项目主页" />
+  <style>
+    :root { --bg:#0b0e14; --card:#111522; --muted:#96a0b5; --text:#e6e9ef; --accent:#7aa2f7; }
+    *{box-sizing:border-box}
+    body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "PingFang SC", "Noto Sans SC", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:linear-gradient(180deg,#0b0e14 0%, #0f1524 60%, #0b0e14 100%); color:var(--text)}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(12px); background:rgba(11,14,20,.6); border-bottom:1px solid rgba(255,255,255,.06); z-index:10}
+    .wrap{max-width:1080px; margin:0 auto; padding:16px}
+    .brand{display:flex; align-items:center; gap:10px}
+    .logo{width:36px; height:36px; border-radius:10px; background:radial-gradient(circle at 30% 30%, #7aa2f7, #9ece6a); box-shadow:0 6px 20px rgba(122,162,247,.35)}
+    .title{font-size:18px; font-weight:700}
+
+    .hero{padding:72px 16px 32px}
+    .hero h1{font-size:36px; margin:0 0 12px}
+    .hero p{color:var(--muted); margin:0}
+
+    .grid{display:grid; gap:16px; grid-template-columns:repeat(12,1fr)}
+    .card{grid-column: span 12; background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .card h3{margin:0; padding:14px 16px; border-bottom:1px solid rgba(255,255,255,.06)}
+    .card .body{padding:16px}
+
+    @media (min-width: 720px){
+      .span-4{grid-column: span 4}
+      .span-6{grid-column: span 6}
+      .span-8{grid-column: span 8}
+      .span-12{grid-column: span 12}
+    }
+
+    .gallery{display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:10px}
+    .gallery img{width:100%; height:160px; object-fit:cover; border-radius:10px; border:1px solid rgba(255,255,255,.06)}
+
+    .video{position:relative; padding-top:56.25%; background:#000; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,.06)}
+    .video iframe,.video video{position:absolute; inset:0; width:100%; height:100%; border:0}
+
+    footer{color:var(--muted); padding:28px 16px; text-align:center}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; background:#1a2033; border:1px solid rgba(255,255,255,.08); color:var(--text)}
+    .btn:hover{background:#1e2640}
+    code{background:#0d1324; padding:2px 6px; border-radius:6px; border:1px solid rgba(255,255,255,.06)}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="title">我的项目主页</div>
+      <div style="margin-left:auto"><a class="btn" href="#getting-started">如何使用</a></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>欢迎 👋</h1>
+      <p>这里展示项目介绍、截图/图片、演示视频与更新日志。全部静态文件，直接用 Git 管理并部署到 GitHub Pages/GitLab Pages/Netlify/Vercel。</p>
+    </section>
+
+    <section class="grid" aria-label="内容">
+      <article class="card span-8">
+        <h3>项目简介</h3>
+        <div class="body">
+          <p>在 <code>index.html</code> 输入你的项目文案。支持<strong>文字</strong>、<strong>链接</strong>、<strong>图片</strong>和<strong>视频</strong>。</p>
+          <ul class="muted">
+            <li>图片：放在 <code>assets/images/</code>，用 <code>&lt;img src="assets/images/xxx.jpg" alt="描述" /&gt;</code></li>
+            <li>视频（本地 mp4）：放在 <code>assets/videos/</code>，用如下播放器</li>
+          </ul>
+          <div class="video" style="margin-top:12px">
+            <video src="assets/videos/demo.mp4" controls poster="assets/images/cover.jpg"></video>
+          </div>
+          <p class="muted" style="margin-top:10px">或嵌入 B 站/YouTube：把 iframe 粘在下方容器内即可。</p>
+          <div class="video" style="margin-top:10px">
+            <!-- YouTube/B站示例：
+            <iframe src="https://www.youtube.com/embed/xxxxxxxx" allowfullscreen title="YouTube demo"></iframe>
+            <iframe src="//player.bilibili.com/player.html?bvid=BVxxxxxxxx" allowfullscreen title="Bilibili demo"></iframe>
+            -->
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-4">
+        <h3>关键信息</h3>
+        <div class="body">
+          <ul>
+            <li>版本：<strong>v1.0.0</strong></li>
+            <li>许可证：<a href="#">MIT</a></li>
+            <li>仓库：<a href="#">yourname/yourrepo</a></li>
+          </ul>
+          <p class="muted">上方字段按需更改，或直接删掉。</p>
+        </div>
+      </article>
+
+      <article class="card span-12">
+        <h3>图片画廊</h3>
+        <div class="body">
+          <div class="gallery">
+            <img src="assets/images/sample-1.jpg" alt="示例 1"/>
+            <img src="assets/images/sample-2.jpg" alt="示例 2"/>
+            <img src="assets/images/sample-3.jpg" alt="示例 3"/>
+            <img src="assets/images/sample-4.jpg" alt="示例 4"/>
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-12" id="getting-started">
+        <h3>如何使用（Git 工作流 + 部署）</h3>
+        <div class="body">
+<pre><code># 1) 新建本地目录并初始化仓库
+mkdir project-home && cd project-home
+mkdir -p assets/images assets/videos
+
+# 2) 把本文件保存为 index.html，按需把图片放到 assets/images，视频放到 assets/videos
+
+# 3) Git 初始化并首个提交
+git init
+printf "node_modules\n.DS_Store\n" &gt;&gt; .gitignore
+
+git add .
+git commit -m "feat: initial project homepage"
+
+# 4) 推送到 GitHub（示例）
+#    先在 GitHub 上创建仓库 yourname/yourrepo，然后：
+git branch -M main
+git remote add origin https://github.com/yourname/yourrepo.git
+git push -u origin main
+
+# 5) 启用 GitHub Pages
+#    在仓库 Settings ▸ Pages：
+#    Source 选择 "Deploy from a branch"
+#    Branch 选择 "main"，文件夹 "/(root)"，保存。
+#    几十秒后访问 https://yourname.github.io/yourrepo
+
+# (可选) 用命令行本地预览（需安装一个静态服务器）
+# python3 -m http.server 8000
+# 然后浏览器访问 http://localhost:8000
+</code></pre>
+          <p class="muted">如果用 GitLab Pages/Vercel/Netlify：直接导入仓库，一键部署即可。</p>
+        </div>
+      </article>
+
+      <article class="card span-12">
+        <h3>维护建议</h3>
+        <div class="body">
+          <ul>
+            <li><strong>结构简洁：</strong><code>index.html</code> + <code>assets/</code> 即可。</li>
+            <li><strong>媒体优化：</strong>图片尽量 &lt; 200KB，视频 h264/aac，必要时使用 <code>poster</code> 封面。</li>
+            <li><strong>相对路径：</strong>便于本地预览与线上一致。</li>
+            <li><strong>版本化内容：</strong>更新大图/视频时改文件名避免缓存问题。</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> 我的项目主页 · 由静态文件驱动
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
