@@ -6,7 +6,7 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="IFlyVLA - IFlyTek Reasearch & Development Groups">
+  <meta name="title" content="iFlyBot-VLA - iFlyTek Reasearch & Development Groups">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
@@ -19,9 +19,9 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <meta property="og:site_name" content="iFlyTek Reaserch & Development Groups">
   <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
+  <meta property="og:title" content="iFlyBot-VLA">
   <!-- TODO: Same as description above -->
   <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Replace with your actual website URL -->
@@ -74,11 +74,11 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>iFlyBot-VLA Tech Report</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/images/iflytek_logo-1.png">
+  <link rel="apple-touch-icon" href="assets/images/iflytek_logo-1.png">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -241,7 +241,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">IFlyVLA</h1>
+            <h1 class="title is-1 publication-title">iFlyBot-VLA</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
@@ -255,7 +255,7 @@
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">IFlyTek<br>Reasearch & Development Groups</span>
+                    <span class="author-block">iFlyTek<br>Reasearch & Development Groups</span>
                     <!-- TODO: Remove this line if no equal contribution -->
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
@@ -269,24 +269,24 @@
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
-                        <span>Paper</span>
+                        <span>arXiv</span>
                       </a>
                     </span>
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="https://huggingface.co/IflyBot/IflyBotVLM" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
-                      <span>Supplementary</span>
+                      <span>iFlyBot-VLM</span>
                     </a>
                   </span>
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/xuwenjie401/iFlyBot-VLA.git" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -300,9 +300,9 @@
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <img src="assets\images\huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:1em; height:1em; vertical-align:middle;">
                   </span>
-                  <span>arXiv</span>
+                  <span>Dataset</span>
                 </a>
               </span>
             </div>
@@ -321,11 +321,11 @@
       <!-- TODO: Replace with your teaser video -->
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
         <!-- TODO: Add your video file path here -->
-        <source src="assets\videos\lindenbot-1.mp4" type="video/mp4">
+        <source src="assets\videos\iFlyBot_page_video-1.mp4" type="video/mp4">
       </video>
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-        Coke, CoKe, COKE !!!
+        iFlyBot-VLA, a robust bimanual manipulation policy for diverse tasks
       </h2>
     </div>
   </div>
@@ -334,20 +334,20 @@
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
-  <div class="container is-max-desktop">
+  <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            We introduce IFlyVLA, a large-scale Vision-Language-Action (VLA) model trained by a new framework. The core idea is a dual-level action representation framework that jointly supervises both the Vision-Language Model (VLM) and the action expert during training. 
+            We introduce iFlyBot-VLA, a large-scale Vision-Language-Action (VLA) model trained by a new framework. The core idea is a dual-level action representation framework that jointly supervises both the Vision-Language Model (VLM) and the action expert during training. 
             Specifically, the VLM is trained to predict two complementary forms of actions: 
             (1) latent actions derived from a codebook pretrained on cross-embodiment manipulation data, capturing implicit high-level intentions; 
             and (2) structured discrete action tokens obtained from frequency-domain transformations of continuous control signals, encoding explicit low-level dynamics. 
             This dual supervision aligns the representation spaces of language, vision, and action, enabling the VLM to directly contribute to action generation. 
             Experimental results on LIBERO Franka and SimplerEnv benchmarks demonstrate the superiority of our framework, 
-            while real-world evaluations further show that IFlyVLA achieves competitive success rates across diverse and challenging manipulation tasks.
+            while real-world evaluations further show that iFlyBot-VLA achieves competitive success rates across diverse and challenging manipulation tasks.
           </p>
         </div>
       </div>
@@ -364,31 +364,27 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="assets\images\iflyvla_pipeline-1.PNG" alt="First research result visualization" loading="lazy"/>
+        <img src="assets\images\iFlyBot-VLA_pipeline-1.PNG" alt="First research result visualization" loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
-          IFlyVLA Pipeline
+          iFlyBot-VLA Pipeline
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="assets\images\lam_all-1.PNG" alt="Second research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          We pretrained a latent action model following the LAPA framework.
+          Specifically, the model adopts a VQ-VAE pipeline, where the encoder compresses the action representation from pairs of sequential images, and the decoder reconstructs future frames to construct the training loss.
+          Compared to UniVLA or LAPA, we further extend the dataset with a large amount of bimanual (dual-arm) manipulation data, and accordingly adjust the codebook capacity and related parameters.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
+
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
+      <img src="assets\images\libero_exp1.PNG" alt="Fourth research result visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Experimental results demonstrate that the iFlyBot-VLA model achieves promising performance in the Libero simulator, outperforming existing open-source models and showing a significant improvement over current action-chunk-based inference approaches.
       </h2>
     </div>
   </div>
