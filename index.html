@@ -194,12 +194,11 @@
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
             <h1 class="title is-1 publication-title">iFlyBot-VLA</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">iFlyTek Research & Development Groups Robotics Team</a><sup>*</sup>,</span>
-                  </div>
-
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  iFlyTek Research & Development Groups Robotics Team<sup>*</sup>,
+                </span>
+              </div>
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
@@ -212,17 +211,6 @@
                         <span>arXiv</span>
                       </a>
                     </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="https://huggingface.co/IflyBot/IflyBotVLM" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>iFlyBot-VLM</span>
-                    </a>
-                  </span>
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
@@ -242,7 +230,7 @@
                   <span class="icon">
                     <img src="assets\images\huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:1em; height:1em; vertical-align:middle;">
                   </span>
-                  <span>Dataset</span>
+                  <span>Dataset(coming soon)</span>
                 </a>
               </span>
             </div>
@@ -288,13 +276,13 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            We introduce iFlyBot-VLA, a large-scale Vision-Language-Action (VLA) model trained by a new framework. The core idea is a dual-level action representation framework that jointly supervises both the Vision-Language Model (VLM) and the action expert during training. 
+            We introduce <b>iFlyBot-VLA</b>, a large-scale Vision-Language-Action (VLA) model trained by a new framework. The core idea is a dual-level action representation framework that jointly supervises both the Vision-Language Model (VLM) and the action expert during training. 
             Specifically, the VLM is trained to predict two complementary forms of actions: 
             (1) latent actions derived from a codebook pretrained on cross-embodiment manipulation data, capturing implicit high-level intentions; 
             and (2) structured discrete action tokens obtained from frequency-domain transformations of continuous control signals, encoding explicit low-level dynamics. 
             This dual supervision aligns the representation spaces of language, vision, and action, enabling the VLM to directly contribute to action generation. 
             Experimental results on LIBERO Franka and SimplerEnv benchmarks demonstrate the superiority of our framework, 
-            while real-world evaluations further show that iFlyBot-VLA achieves competitive success rates across diverse and challenging manipulation tasks.
+            while real-world evaluations further show that <b>iFlyBot-VLA</b> achieves competitive success rates across diverse and challenging manipulation tasks.
           </p>
         </div>
       </div>
@@ -311,10 +299,12 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="assets\images\spark_vla_pipeline.jpg" alt="First research result visualization" loading="lazy"/>
+        <img src="assets\images\vla_pipeline.jpg" alt="First research result visualization" loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
-          iFlyBot-VLA Pipeline
+          The architecture of iFlyBot-VLA consists primarily of a language transformer backbone and an action expert network.
+          The model generates executable robot actions through a combination of explicit and implicit planning.
+          The key–value (KV) cache from the VLM component is passed to the downstream action expert, while the FAST token—which corresponds to the implicit planning process—is not forwarded to the Action Expert.
         </h2>
       </div>
       <div class="item">
@@ -389,20 +379,68 @@
 <!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">More From Our Team: iFlyTek-VLM</h2>
+        <div class="container">
+          <h2 class="title is-3">
+        More From Our Team:<br><br>
+        <span class="has-text-centered" style="display:block;">iFlyBot-VLM</span>
+      </h2>
+
+      <div class="has-text-centered" style="margin-top:1rem;">
+        <a href="https://huggingface.co/IflyBot/IflyBotVLM" target="_blank"
+          class="external-link button is-normal is-rounded is-dark">
+          <span class="icon">
+            <img src="assets\images\huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:1em; height:1em; vertical-align:middle;">
+          </span>
+          <span>iFlyBot-VLM</span>
+        </a>
+      </div>
+      <section class="section hero is-light">
+        <div class="container">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <!-- TODO: Replace with your paper abstract -->
+                <p>
+                We present <b>iFlyBot-VLM</b>, a general-purpose Vision-Language Model (VLM) explicitly designed for the domain of Embodied Intelligence. The central objective of iFlyBot-VLM is to bridge the cross-modal semantic gap between high-dimensional environmental perception and low-level robotic motion control. To this end, the model abstracts complex visual and spatial information into a body-agnostic and transferable "Operational Language", thereby enabling seamless perception–action closed-loop coordination across diverse robotic platforms.
+                The architecture of <b>iFlyBot-VLM</b> is systematically designed to realize four key functional capabilities essential for embodied intelligence:
+                1) Spatial Understanding and Metric Reasoning;
+                2) Interactive Target Grounding;
+                3) Action Abstraction and Control Parameter Generation;
+                4) Task Planning and Skill Sequencing;
+                
+                We envision <b>iFlyBot-VLM</b> as a scalable and generalizable foundation model for embodied AI, facilitating the progression from specialized task-oriented systems toward generalist, cognitively capable agents.  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-image0">
+          <!-- TODO: Add poster image for better preview -->
+          <img src="assets\images\architecture.png" alt="Second research result visualization" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+             iFlyBot-VLM inherits the robust, three-stage "ViT-Projector-LLM" paradigm from established Vision-Language Models. It integrates a dedicated, incrementally pre-trained Visual Encoder with an advanced Language Model via a simple, randomly initialized MLP projector for efficient feature alignment.
+          </h2>
+        </div>
         <div class="item item-image1">
           <!-- TODO: Add poster image for better preview -->
           <img src="assets\images\smart_donut_chart.png" alt="Second research result visualization" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+              The rich composition of embodied AI domain data has significantly enhanced the performance of iFlyBot-VLM in spatial understanding, perception, and task planning.
+          </h2>
         </div>
         <div class="item item-image2">
             <!-- Your video file here -->
             <img src="assets\images\radar_performance.png" alt="Second research result visualization" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              iFlyBot-VLM achieves state-of-the-art (SOTA) or near-SOTA performance on spatial understanding, perception, and task planning benchmarks.
+            </h2>
         </div>
         <div class="item item-image3">
             <!-- Your video file here -->
-            <img src="assets\images\benchmark_performance.png" alt="Second research result visualization" loading="lazy"/>
+            <img src="assets\images\benchmark_performance.jpg" alt="Second research result visualization" loading="lazy"/>
         </div>
       </div>
     </div>
