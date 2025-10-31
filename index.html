@@ -299,48 +299,54 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="assets\images\vla_pipeline.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
+
+      <!-- 内容项1 -->
+      <div class="item" style="margin-bottom: 8em;">
+        <img src="assets/images/vla_pipeline.jpg" alt="Architecture visualization" 
+             loading="lazy" style="display:block; margin:auto; max-width:90%; border-radius:12px;">
+        <h2 class="subtitle has-text-centered" style="margin-top: 1.5em;">
           The architecture of iFlyBot-VLA consists primarily of a language transformer backbone and an action expert network.
           The model generates executable robot actions through a combination of explicit and implicit planning.
-          The key–value (KV) cache from the VLM component is passed to the downstream action expert, while the FAST token—which corresponds to the implicit planning process—is not forwarded to the Action Expert.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="assets\images\lam_all-1.PNG" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          We pretrained a latent action model following the LAPA framework.
-          Specifically, the model adopts a VQ-VAE pipeline, where the encoder compresses the action representation from pairs of sequential images, and the decoder reconstructs future frames to construct the training loss.
-          Compared to UniVLA or LAPA, we further extend the dataset with a large amount of bimanual (dual-arm) manipulation data, and accordingly adjust the codebook capacity and related parameters.
         </h2>
       </div>
 
-     <div class="item">
-      <!-- Your image here -->
-      <img src="assets\images\libero_exp1.PNG" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Experimental results demonstrate that the iFlyBot-VLA model achieves promising performance in the Libero simulator, outperforming existing open-source models and showing a significant improvement over current action-chunk-based inference approaches.
-      </h2>
+      <!-- 内容项2 -->
+      <div class="item" style="margin-bottom: 8em;">
+        <img src="assets/images/lam_all-1.PNG" alt="Latent action model visualization"
+             loading="lazy" style="display:block; margin:auto; max-width:90%; border-radius:12px;">
+        <h2 class="subtitle has-text-centered" style="margin-top: 1.5em;">
+          The previously mentioned latent actions are produced by a latent action model we pretrained following the LAPA-simIlar framework, employing a VQ-VAE pipeline.
+        </h2>
+      </div>
+
+      <!-- 内容项3 -->
+      <div class="item" style="margin-bottom: 8em;">
+        <img src="assets\images\pretrain-data.PNG" alt="Experimental results visualization"
+             loading="lazy" style="display:block; margin:auto; max-width:90%; border-radius:12px;">
+        <h2 class="subtitle has-text-centered" style="margin-top: 1.5em;">
+          Overview of the data composition and proportions employed in the pre-training stage.
+        </h2>
+      </div>
+
+      <!-- 内容项4 -->
+      <div class="item" style="margin-bottom: 8em;">
+        <img src="assets/images/libero_exp1.PNG" alt="Experimental results visualization"
+             loading="lazy" style="display:block; margin:auto; max-width:90%; border-radius:12px;">
+        <h2 class="subtitle has-text-centered" style="margin-top: 1.5em;">
+          Experimental results demonstrate that the iFlyBot-VLA model achieves strong performance in the Libero simulator.
+        </h2>
+      </div>
+
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
 
 
-
-<!-- Youtube video -->
+<!-- experiments -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -355,7 +361,7 @@
         </div>
         <div class="item item-image2">
             <!-- Your video file here -->
-            <img src="assets\images\general_pick_place-1.PNG" alt="Second research result visualization" loading="lazy"/>
+            <img src="assets\images\gpp_result_short.PNG" alt="Second research result visualization" loading="lazy"/>
             <h2 class="subtitle has-text-centered">
               iFlyTek-VLA trained on our self-collected data achieves a higher real-world success rate compared to π₀.
             </h2>
