@@ -196,7 +196,7 @@
             <h1 class="title is-1 publication-title">iFlyBot-VLA</h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  iFlyTek Research & Development Groups Robotics Team<sup>*</sup>,
+                  iFlyTek Research & Development Groups, LindenBot
                 </span>
               </div>
                   <div class="column has-text-centered">
@@ -381,7 +381,15 @@
               In real-world experiments, iFlyBot-VLA demonstrates remarkable robustness in performing such tasks.
             </h2>
         </div>
-
+        <div class="item item-image4">
+            <!-- Your video file here -->
+            <img src="assets\images\folding_eval_3.PNG" alt="Second research result visualization" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              Given the complexity of folding task, we provide a more detailed comparison. 
+              Since locating the correct grasping points often requires multiple attempts, we imposed a 3-minute time limit for each full execution. The detailed results are presented in the bottom image, 
+              where the x-axis corresponds to the steps illustrated in the upper image.
+            </h2>
+        </div>
         
       </div>
     </div>
@@ -398,14 +406,26 @@
         <span class="has-text-centered" style="display:block;">iFlyBot-VLM</span>
       </h2>
 
-      <div class="has-text-centered" style="margin-top:1rem;">
-        <a href="https://huggingface.co/IflyBot/IflyBotVLM" target="_blank"
-          class="external-link button is-normal is-rounded is-dark">
-          <span class="icon">
-            <img src="assets\images\huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:1em; height:1em; vertical-align:middle;">
-          </span>
-          <span>iFlyBot-VLM</span>
-        </a>
+      <div class="publication-links is-flex is-justify-content-center" style="gap: 1rem; margin-top: 1rem;">
+        <span class="link-block">
+          <a href="https://huggingface.co/IflyBot/IflyBotVLM" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <img src="assets/images/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:1em; height:1em; vertical-align:middle;">
+            </span>
+            <span>iFlyBot-VLM</span>
+          </a>
+        </span>
+
+        <span class="link-block">
+          <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+            <span>arXiv</span>
+          </a>
+        </span>
       </div>
 
       <section class="hero teaser">
@@ -415,7 +435,7 @@
             <!-- <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;"> -->
             <div style="width:800px; height:450px; border-radius:12px; overflow:hidden;">
               <iframe 
-                src="https://www.youtube.com/embed/uK9YomfbPjM" 
+                src="https://www.youtube.com/embed/bw4n0k-2yBI?rel=0"
                 title="iFlyBot-VLM Demo"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -423,9 +443,8 @@
                 style="position:absolute; top:0; left:0; width:100%; height:100%;">
               </iframe>
             </div>
-            <!-- Video description -->
-            <h2 class="subtitle has-text-centered" style="margin-top: 1em;">
-              iFlyBot-VLM, trajectory inference demonstration
+            <h2 class="subtitle has-text-centered">
+              iFlyBot-VLM trajectory inference demonstration.
             </h2>
           </div>
         </div>
@@ -438,14 +457,13 @@
               <div class="content has-text-justified">
                 <!-- TODO: Replace with your paper abstract -->
                 <p>
-                We present <b>iFlyBot-VLM</b>, a general-purpose Vision-Language Model (VLM) explicitly designed for the domain of Embodied Intelligence. The central objective of iFlyBot-VLM is to bridge the cross-modal semantic gap between high-dimensional environmental perception and low-level robotic motion control. To this end, the model abstracts complex visual and spatial information into a body-agnostic and transferable "Operational Language", thereby enabling seamless perception–action closed-loop coordination across diverse robotic platforms.
-                The architecture of <b>iFlyBot-VLM</b> is systematically designed to realize four key functional capabilities essential for embodied intelligence:
-                1) Spatial Understanding and Metric Reasoning;
-                2) Interactive Target Grounding;
-                3) Action Abstraction and Control Parameter Generation;
-                4) Task Planning and Skill Sequencing;
-                
-                We envision <b>iFlyBot-VLM</b> as a scalable and generalizable foundation model for embodied AI, facilitating the progression from specialized task-oriented systems toward generalist, cognitively capable agents.  
+                We introduce iFlyBot-VLM, a general-purpose Vision-Language Model (VLM) developed to advance the domain of embodied intelligence. The central objective of iFlyBot-VLM is to bridge the cross-modal semantic gap between high-dimensional environmental perception and low-level robotic motion control. To this end, the model abstracts complex visual and spatial information into a body-agnostic and transferable “Operational Language,” enabling seamless perception–action closed-loop coordination across diverse robotic platforms.
+                The architecture of iFlyBot-VLM is systematically designed to realize four key functional capabilities essential for embodied intelligence:
+                1) Spatial understanding and metric reasoning;
+                2) Interactive target grounding;
+                3) Action abstraction and control parameter generation;
+                4) Task planning and skill sequencing.
+                We envision iFlyBot-VLM as a scalable and generalizable foundation model for embodied AI, facilitating the progression from specialized, task-oriented systems toward generalist, cognitively capable agents. We conducted evaluations on ten mainstream embodied intelligence–related VLM benchmark datasets, such as Blink and Where2Place, achieving state-of-the-art performance while preserving the model’s generalization capabilities. Both the training data and model weights will be publicly released to foster further research and development in the field of embodied intelligence.
                 </p>
               </div>
             </div>
@@ -487,14 +505,14 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">More Demostrations</h2>
+      <h2 class="title is-3">iFlyBot-VLM in actions</h2>
       <div id="results-carousel" class="carousel results-carousel">
 
   <!-- 视频1 -->
   <div class="item item-video1">
     <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;">
       <iframe 
-        src="https://www.youtube.com/embed/bw4n0k-2yBI?rel=0"
+        src="https://www.youtube.com/embed/uK9YomfbPjM?rel=0"
         title="iFlyBot-VLM Demo"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -503,7 +521,7 @@
       </iframe>
     </div>
     <h2 class="subtitle has-text-centered">
-      iFlyBot-VLM trajectory inference demonstration.
+      iFlyBot-VLM Applied to Object Picking and Placing
     </h2>
   </div>
 
@@ -520,7 +538,7 @@
       </iframe>
     </div>
     <h2 class="subtitle has-text-centered">
-      Performance of iFlyBot-VLA in general pick-and-place task.
+      iFlybot-VLM: Enabling Spatial Understanding-Enhanced Instruction Generalization
     </h2>
   </div>
 
@@ -537,7 +555,7 @@
       </iframe>
     </div>
     <h2 class="subtitle has-text-centered">
-      iFlyBot-VLA in long-horizon, dual-arm tasks.
+      iFlybot-VLM: Driving Advanced Object Generalization
     </h2>
   </div>
 
@@ -554,11 +572,22 @@
       </iframe>
     </div>
     <h2 class="subtitle has-text-centered">
-      Folding clothes — robustness under deformation.
+      iFlybot-VLM: Boosting Advanced Scene Generalization
     </h2>
   </div>
 
 </div>
+
+<!-- 注解部分 -->
+<div class="has-text" style="margin-top: 0em;">
+  <p class="is-size-7" style="color:#555; font-style:italic;">
+    <strong style="color:#d67f00;">*</strong> Motion: Supported by Curobo
+  </p>
+  <p class="is-size-7" style="color:#555; font-style:italic;">
+    <strong style="color:#d67f00;">*</strong>  Interaction: Supported by iFlyTek Multimodal Interaction Backpack
+  </p>
+</div>
+
 
     </div>
   </div>
